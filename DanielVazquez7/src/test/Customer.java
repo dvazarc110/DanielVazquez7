@@ -17,13 +17,26 @@ public class Customer {
 	public String getName() {
 		return name;
 	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	public int getAge() {
 		return age;
 	}
-	
+	public void setAge(int age) {
+		this.age = age;
+	}
 	public List<Purchase> getPurchase() {
 		return purchase;
 	}
+	public void setPurchase(List<Purchase> purchase) {
+		this.purchase = purchase;
+	}
+	
+	public Purchase getPurchase(int position){
+		return purchase.get(position);
+	}
+	
 	@Override
 	public String toString() {
 		String s = String.format("Nombre: %s, Edad: %d\nCompras: \n", name, age);

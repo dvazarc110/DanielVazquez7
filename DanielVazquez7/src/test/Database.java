@@ -15,4 +15,9 @@ public class Database {
 	public List<Customer> queryAllCustomer(){
 		return customers;
 	}
+	
+	public Customer getCustomer(int position){
+		return customers.get(position);
+	}
+	
 }

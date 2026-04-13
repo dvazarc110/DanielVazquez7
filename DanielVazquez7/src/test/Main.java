@@ -14,6 +14,18 @@ public class Main {
 		db.addCustomer(new Customer("Lidia", 18, new ArrayList(List.of(new Purchase("Lechuga", 1), new Purchase("Garbanzos", 1)))));
 		db.addCustomer(new Customer("Rosa", 27, new ArrayList(List.of(new Purchase("Arroz", 2), new Purchase("Lechuga", 3), new Purchase("Leche", 3), new Purchase("Garbanzos", 4), new Purchase("Pipas", 5)))));
 		db.queryAllCustomer().forEach(System.out::println);
+		
+		Customer customer = db.getCustomer(0);
+		System.out.println((customer.getPurchase(0)).toString());
+		customer.getPurchase(0).setAmount(9);
+		System.out.println((customer.getPurchase(0)).toString());
+		customer.getPurchase(0).setProduct("Calabazas");;
+		System.out.println((customer.getPurchase(0)).toString());
+		customer.getPurchase().set(0, new Purchase("Agua", 10));
+		System.out.println((customer.getPurchase(0)).toString());
+		System.out.println((customer.getPurchase()).toString());
+
+
 	}
 
 	public static void main(String[] args) {
